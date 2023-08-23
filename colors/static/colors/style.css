@@ -1,0 +1,17 @@
+body {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    gap: 50px;
+}
+
+
+.back {
+    color: white;
+    font-size: 12px;
+    margin-top: 50px;
+}

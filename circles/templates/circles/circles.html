@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>circle buttons</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background-color: black;
+    }
+
+    .center-div, .left-div, .right-div {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .style-button {
+      background-image: linear-gradient(black, white);
+      height: 90px;
+      width: 90px;
+      border: none;
+      border-radius: 45px;
+    }
+
+    .style-button:hover {
+      transform: scale(1.01);
+    }
+
+    .clicked-button {
+      background-image: linear-gradient(black, blue);
+    }
+
+    .bombButton {
+      background-image: linear-gradient(black, red);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="left">
+    <div class="center-div">
+      <button class="style-button circle-button" onclick="clickButton('.circle-button')"></button>
+      <button class="style-button circle-button-2" onclick="clickButton('.circle-button-2')"></button>
+      <button class="style-button circle-button-3" onclick="clickButton('.circle-button-3')"></button>
+    </div>
+    
+    <div class="center-div">
+      <button class="style-button circle-button-4" onclick="clickButton('.circle-button-4')"></button>
+      <button class="style-button circle-button-5" onclick="clickButton('.circle-button-5')"></button>
+      <button class="style-button circle-button-6" onclick="clickButton('.circle-button-6')"></button>
+    </div>
+    
+    <div class="center-div">
+      <button class="style-button circle-button-7" onclick="clickButton('.circle-button-7')"></button>
+      <button class="style-button circle-button-8" onclick="clickButton('.circle-button-8')"></button>
+      <button class="style-button circle-button-9" onclick="clickButton('.circle-button-9')"></button>
+    </div>
+    
+    <div class="center-div">
+      <button class="style-button circle-button-10" onclick="clickButton('.circle-button-10')"></button>
+      <button class="style-button circle-button-11" onclick="clickButton('.circle-button-11')"></button>
+      <button class="style-button circle-button-12" onclick="clickButton('.circle-button-12')"></button>
+    </div>
+    
+    <div class="center-div">
+      <button class="style-button circle-button-13" onclick="clickButton('.circle-button-13')"></button>
+      <button class="style-button circle-button-14" onclick="clickButton('.circle-button-14')"></button>
+      <button class="style-button circle-button-15" onclick="clickButton('.circle-button-15')"></button>
+    </div>
+
+    <div class="center-div">
+      <button class="style-button circle-button-16" onclick="clickButton('.circle-button-16')"></button>
+      <button class="style-button circle-button-17" onclick="clickButton('.circle-button-17')"></button>
+      <button class="style-button circle-button-18" onclick="clickButton('.circle-button-18')"></button>
+    </div>
+    
+    <div class="center-div">
+      <button class="style-button circle-button-19" onclick="clickButton('.circle-button-19')"></button>
+      <button class="style-button circle-button-20" onclick="clickButton('.circle-button-20')"></button>
+      <button class="style-button circle-button-21" onclick="clickButton('.circle-button-21')"></button>
+    </div>
+    
+  </div>
+
+
+
+  <div class="right">
+    <div class="left-div">
+      <button class="style-button circle-button-22" onclick="clickButton('.circle-button-22')"></button>
+      <button class="style-button circle-button-23" onclick="clickButton('.circle-button-23')"></button>
+      <button class="style-button circle-button-24" onclick="clickButton('.circle-button-24')"></button>
+    </div>
+    
+    <div class="left-div">
+      <button class="style-button circle-button-25" onclick="clickButton('.circle-button-25')"></button>
+      <button class="style-button circle-button-26" onclick="clickButton('.circle-button-26')"></button>
+      <button class="style-button circle-button-27" onclick="clickButton('.circle-button-27')"></button>
+    </div>
+    
+    <div class="left-div">
+      <button class="style-button circle-button-28" onclick="clickButton('.circle-button-28')"></button>
+      <button class="style-button circle-button-29" onclick="clickButton('.circle-button-29')"></button>
+      <button class="style-button circle-button-30" onclick="clickButton('.circle-button-30')"></button>
+    </div>
+    
+    <div class="left-div">
+      <button class="style-button circle-button-31" onclick="clickButton('.circle-button-31')"></button>
+      <button class="style-button circle-button-32" onclick="clickButton('.circle-button-32')"></button>
+      <button class="style-button circle-button-33" onclick="clickButton('.circle-button-33')"></button>
+    </div>
+    
+    <div class="left-div">
+      <button class="style-button circle-button-34" onclick="clickButton('.circle-button-34')"></button>
+      <button class="style-button circle-button-35" onclick="clickButton('.circle-button-35')"></button>
+      <button class="style-button circle-button-36" onclick="clickButton('.circle-button-36')"></button>
+    </div>
+    
+    <div class="left-div">
+      <button class="style-button circle-button-37" onclick="clickButton('.circle-button-37')"></button>
+      <button class="style-button circle-button-38" onclick="clickButton('.circle-button-38')"></button>
+      <button class="style-button circle-button-39" onclick="clickButton('.circle-button-39')"></button>
+    </div>
+    
+    <div class="left-div">
+      <button class="style-button circle-button-40" onclick="clickButton('.circle-button-40')"></button>
+      <button class="style-button circle-button-41" onclick="clickButton('.circle-button-41')"></button>
+      <button class="style-button circle-button-42" onclick="clickButton('.circle-button-42')"></button>
+    </div>
+    
+  </div>
+
+  <a href="{% url 'mainpage' %}">BACK TO MAIN PAGE</a>
+  
+  <script>
+
+    function clickButton(selector) {
+      const buttonElement = document.querySelector(selector);
+
+      if (buttonElement.classList.contains('clicked-button') || buttonElement.classList.contains('bombButton')) {
+        buttonElement.classList.remove('clicked-button');
+        buttonElement.classList.remove('bombButton');
+      } else {
+        buttonElement.classList.add('clicked-button');
+        if (selector === '.circle-button' || selector === '.circle-button-42' || selector === '.circle-button-19' || selector === '.circle-button-24') {
+          buttonElement.classList.add('bombButton');
+
+          let buttonBomb = document.querySelectorAll('.bombButton');
+          let buttonCount = buttonBomb.length;
+          console.log(buttonCount);
+
+          let button = document.querySelectorAll("button");
+
+          if (buttonCount >= 4) {
+            for (let i = 0; i < button.length; i++) {
+              button[i].classList.add('bombButton');
+              }
+          } 
+       }
+      }
+    }
+  </script>
+</body>
+</html>

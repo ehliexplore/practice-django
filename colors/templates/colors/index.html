@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'colors/style.css' %}">
+    <title>Colors</title>
+</head>
+<body>
+    <div class="colors-options">
+        <a style="color: red;" href="red/">RED</a>
+        <a style="color: blue;" href="blue/">BLUE</a>
+        <a style="color: yellow;" href="yellow">YELLOW</a>
+    </div>
+
+    <div class="back">
+        <a href="{% url 'mainpage' %}">BACK TO MAIN PAGE</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse</title>
+    <link rel="shortcut icon" href="{% static 'eclipse/favicon.ico' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'eclipse/style.css' %}">
+</head>
+<body>
+    <audio id="myAudio" src="{% static 'eclipse/eclipse.mp3' %}" preload="auto"></audio>
+    
+    
+    <a href="https://soundcloud.com/eligejjjj" target="_blank">
+        <img src="{% static 'eclipse/plastico.jpg' %}" alt="Eclipse cover art" class="img-size">
+    </a>
+
+    <a href="{% url 'mainpage' %}">BACK TO MAIN PAGE</a>
+
+    <script>
+        window.onload = function() {
+        var audio = document.getElementById("myAudio")
+        audio.play()
+        }
+        
+    </script>
+</body>
+</html>
