@@ -18,7 +18,7 @@ document.addEventListener('click', event => {
         add_post();
 
         element.parentElement.style.animationPlayState = 'running';
-        element.parentElement.style.addEventListener('animationend', () => {
+        element.parentElement.addEventListener('animationend', () => {
             element.parentElement.remove();
             
         })
