@@ -1,13 +1,3 @@
-document.addEventListener('click', event => {
-    const element = event.target;
-    if (element.className === 'button-hide') {
-        element.parentElement.style.animationPlayState = 'running';
-        element.parentElement.style.addEventListener('animationend', () => {
-            element.parentElement.remove();
-        })
-    }
-})
-
 let counter = 10;
 
 function add_post() {
@@ -15,9 +5,26 @@ function add_post() {
     post.className = 'single-post';
     post.innerHTML = `Post ${counter + 1} <button class="button-hide">Hide</button>`;
     counter++;
-
     document.querySelector('.posts').append(post);
+    
+    console.log(`Button ${counter} created.`)
+
 }
+
+document.addEventListener('click', event => {
+    const element = event.target;
+    if (element.className === 'button-hide') {
+
+        add_post();
+
+        element.parentElement.style.animationPlayState = 'running';
+        element.parentElement.style.addEventListener('animationend', () => {
+            element.parentElement.remove();
+            
+        })
+    }
+})
+
 
 window.onscroll = () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
