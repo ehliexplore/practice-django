@@ -23,4 +23,5 @@ urlpatterns = [
     path('colors/', include("colors.urls")),
     path('circles/', include("circles.urls")),
     path('eclipse/', include("eclipse.urls")),
+    path('scroll/', include('scroll.urls')),
 ]

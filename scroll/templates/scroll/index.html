@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSTS</title>
+
+    <link rel="stylesheet" href="{% static 'scroll/style.css' %}">
+</head>
+<body>
+    <a href="{% url 'mainpage' %}">BACK TO MAIN PAGE</a>
+
+    <h1>SCROLL</h1>
+    <div class="posts">
+        <div class="single-post">Post 1 <button class="button-hide">Hide</button></div>
+        <div class="single-post">Post 2 <button class="button-hide">Hide</button></div>
+        <div class="single-post">Post 3 <button class="button-hide">Hide</button></div>
+        <div class="single-post">Post 4 <button class="button-hide">Hide</button></div>
+        <div class="single-post">Post 5 <button class="button-hide">Hide</button></div>
+        <div class="single-post">Post 6 <button class="button-hide">Hide</button></div>
+        <div class="single-post">Post 7 <button class="button-hide">Hide</button></div>
+        <div class="single-post">Post 8 <button class="button-hide">Hide</button></div>
+        <div class="single-post">Post 9 <button class="button-hide">Hide</button></div>
+        <div class="single-post">Post 10 <button class="button-hide">Hide</button></div>
+        
+    </div>
+    
+
+    <script src="{% static 'scroll/script.js' %}"></script>
+</body>
+</html>

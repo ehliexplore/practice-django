@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'circles',
     'mainpage',
     'eclipse',
+    'scroll',
     
     'django.contrib.admin',
     'django.contrib.auth',
