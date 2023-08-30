@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    background: radial-gradient(circle, white, yellow);
+    height: 600px;
+}
+
+#app {
+    text-align: center;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+
+.initial-message {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    z-index: 100;
+}
+
+
+#problem {
+    font-size: 72px;
+    margin-bottom: 30px;
+}
+
+.incorrect {
+    color: red;
+}
+
+#winner, #loser {
+    font-size: 72px;
+    color: white;
+}
+
+
+.play-again-button {
+    height: 50px;
+    width: 100px;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+
+    margin-top: 30px;
+
+}
+
+.input-and-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-style {
+    height: 45px;
+    width: 150px;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 25px;
+    
+}
+
+.input-style:hover {
+    transform: scale(1.05);
+}
+
+.enter-button {
+    height: 50px;
+    width: 70px;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.enter-button:hover {
+    transform: scale(1.1);
+}
+
+.score {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.countdown-style-green {
+    color: green;
+}
+
+#countdown-transform {
+    transform: scale(1.02);
+    font-weight: bold;
+}
+
+.countdown-style-red {
+    color: red;
+}
+
+.countdown-style-green, .countdown-style-red {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.line-animation {
+    height: 5px;
+    background-color: blue;
+    transition: all 1s linear;
+    margin-top: 30px;
+}
+
+.line-animation-end {
+    height: 5px;
+    background-color: red;
+    transition: all 1s linear;
+    margin-top: 30px;
+}
+
+

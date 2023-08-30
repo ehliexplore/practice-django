@@ -24,4 +24,5 @@ urlpatterns = [
     path('circles/', include("circles.urls")),
     path('eclipse/', include("eclipse.urls")),
     path('scroll/', include('scroll.urls')),
+    path('calculationgame', include('calculationgame.urls')),
 ]
