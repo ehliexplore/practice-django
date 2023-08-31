@@ -1,7 +1,8 @@
+const correctSound = new Audio('audio/right.mp3');
+const incorrectSound = new Audio('audio/wrong.mp3');
+
 function App() {
 
-    const correctSound = new Audio('audio/right.mp3');
-    const incorrectSound = new Audio('audio/wrong.mp3');
 
     const [state, setState] = React.useState({
         num1: Math.ceil(Math.random() * 20),
@@ -73,7 +74,7 @@ function App() {
         }, 1000);
 
         return () => clearInterval(timer);
-    })
+    }, [state.timeLeft]);
 
     React.useEffect(() => {
         // Generate a random operator each time num1 or num2 changes
