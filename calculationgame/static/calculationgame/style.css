@@ -1,8 +1,5 @@
 body {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-
     justify-content: center;
     align-items: center;
     
@@ -130,4 +127,14 @@ body {
     margin-top: 30px;
 }
 
+.select-location-div {
+    margin-top: 30px;
+}
 
+.select-location-title {
+    font-size: 17px;
+}
+
+.select-location-dropdown {
+    width: 100px;
+}
