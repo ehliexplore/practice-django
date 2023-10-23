@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+    background-color: black;
+    height: 650px;
+
+    }
+
+    .input-and-button {
+    display: flex;
+    justify-content: center;
+    }
+
+    input {
+    display: flex;
+    align-self: center;
+    padding: 10px;
+    }
+
+    .pyramid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    }
+
+    .row {
+    display: flex;
+    gap: 5px;
+    }
+
+
+.brick {
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: rgb(228, 196, 20);
+}
+
+  </style>
+  <title>Pyramid Generator</title>
+</head>
+<body>
+    <a href="{% url 'mainpage' %}">BACK TO MAIN PAGE</a>
+
+  <div class="input-and-button">
+    <input class="js-input" type="text" placeholder="Number of layers">
+    <button onclick="getInputValue();">Generate</button>
+  </div>
+  <div class="pyramid js-pyramid"></div>
+  
+  <script>
+    function getInputValue() {
+        let input = document.querySelector(".js-input").value;
+
+        if (!isNaN(input)) {
+
+            let inputNumber = parseInt(input);
+            generatePyramid(inputNumber);
+        } else {
+            
+            alert("Please enter a valid number.")
+        }
+
+
+        function generatePyramid(layers) {
+            let pyramidHTML = '';
+
+            for (let i = 0; i < layers; i++) {
+            let line = '';
+
+            for (let j = 0; j < i + 1; j++) {
+                line += `<div class="brick"></div>`;
+            }
+            pyramidHTML += '<div class="row">' + line + '</div>';
+            }
+
+            document.querySelector(".js-pyramid").innerHTML = pyramidHTML;
+        }
+    }
+
+
+
+
+  </script>
+</body>
+</html>

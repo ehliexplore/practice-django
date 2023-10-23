@@ -25,4 +25,5 @@ urlpatterns = [
     path('eclipse/', include("eclipse.urls")),
     path('scroll/', include('scroll.urls')),
     path('calculationgame', include('calculationgame.urls')),
+    path('pyramid/', include("pyramid.urls")),
 ]
